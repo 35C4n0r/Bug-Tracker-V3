@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+root {
+    --background-color: #F5F5F5;
+    --card-background-color: #FFFEFE;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+.bug-crt {
+    background-color: #F5F5F5;
+    margin-left: 3.5vw;
+    margin-right: 3.5vw;
+}
+
+.bug-title {
+    background-color: #F5F5F5;
+}
+
+.title {
+    background-color: #F5F5F5;
+    border: none;
+    box-shadow: 0 0;
+    font-size: 2rem;
+    padding: 1vh 1vw;
+    color: #464444;
+    width: 60vw;
+    margin: 1vh 0;
+}
+
+.title:focus {
+    border-radius: 10px;
+    background-color: #FFFEFE;
+    /*border: ;*/
+    outline: none;
+    /*width: 60vw;*/
+}
+
+.status-nav {
+    background-color: #FFFEFE;
+    display: flex;
+    /*position: fixed;*/
+    /*left: 3.5vw;*/
+    /*right: 3.5vw;*/
+    position: sticky;
+    top: 0;
+    left: 0;
+    /*width:100%;*/
+    flex-direction: column;
+    /*padding-left: 5vw;*/
+}
+
+.cont-status {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.status-nav p {
+    margin-left: 4vw;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    color: #adacac;
+    /*background-color: inherit;*/
+
+}
+
+.status {
+    padding-left: 3vw;
+    /*background-color: inherit;*/
+    display: flex;
+    flex-direction: row;
+
+}
+
+.status button {
+    /*background-color: inherit;*/
+    border: 1px solid #FE6401;
+    height: fit-content;
+    border-radius: 50px;
+    padding: 1vh 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 1vh 1vw 0;
+    cursor: pointer;
+}
+
+.sel-but {
+    background-color: rgba(255, 69, 0, 0.85);
+}
+
+.status button:hover {
+    box-shadow: 2px 8px 8px -4px #FE6401;
+}
+
+.status button:focus {
+
+
+}
+
+.opn {
+    background-color: #09AEEB;
+    height: 2vh;
+    width: 2vh;
+    border-radius: 50%;
+    margin: 0 0.75vw 0 0;
+}
+
+.tbt {
+    background-color: #74CA81;
+    height: 2vh;
+    width: 2vh;
+    border-radius: 50%;
+    margin: 0 0.75vw 0 0;
+}
+
+.ip {
+    background-color: #FBC01F;
+    height: 2vh;
+    width: 2vh;
+    border-radius: 50%;
+    margin: 0 0.75vw 0 0;
+}
+
+.cld {
+    background-color: #48E6CE;
+    height: 2vh;
+    width: 2vh;
+    border-radius: 50%;
+    margin: 0 0.75vw 0 0;
+}
+
+.bug-crt-body {
+    margin-top: 5vh;
+}
+
+.bug-desc {
+    color: #adacac;
+    background-color: #FFFEFE;
+    /*height: 50vh;*/
+    padding: 3.5vh 3.5vw;
+}
+
+.bug-desc textarea {
+    margin-top: 3vh;
+    resize: none;
+    height: 30vh;
+    width: 100%;
+    font-size: x-large;
+    padding: 1vh 1vw;
+}
+
+.other-info {
+    color: #adacac;
+    margin-top: 5vh;
+    background-color: #FFFEFE;
+    /*height: 50vh;*/
+    padding: 3.5vh 3.5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.assign-cont {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: left;*/
+    /*align-items: flex-start;*/
+    /*justify-content: space-between;*/
+}
+
+.assign-cont input {
+    width: 60%;
+    margin-left: 1.5vw;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    padding: 1vh 1vw;
+}
+
+.sev-cont {
+    display: flex;
+    flex-direction: row;
+    /*justify-content:;*/
+    align-items: baseline;
+    /*margin-left: 8rem;*/
+}
+
+.sev-btn button {
+    /*border: 0 solid #FE6401;*/
+    height: fit-content;
+    border-radius: 50px;
+    padding: 1vh 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 3vh 2vw 0;
+    cursor: pointer;
+    width: 10vw;
+}
+
+#min {
+    border: 2px solid #74CA81;
+}
+
+#maj {
+    border: 2px solid #FBC01F;
+}
+
+#crit {
+    border: 2px solid #FE6401;
+}
+
+#meg {
+    border: 2px solid red;
+}
+
+.min-sel {
+    color: whitesmoke;
+    background-color: #74CA81;
+}
+
+.maj-sel {
+    color: whitesmoke;
+    background-color: #FBC01F;
+}
+
+.crit-sel {
+    color: whitesmoke;
+    background-color: #FE6401;
+}
+
+.meg-sel {
+    color: whitesmoke;
+    background-color: red;
+}
+
+.curr-cont {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8vh;
+}
+
+.curr-cont p {
+    width: 8vw;
+}
+
+.curr-cont input {
+    padding: 1vh 1vw;
+    border-radius: 5px;
+    outline: none;
+    margin-left: 5vw;
+    box-shadow: none;
+    border: 1px solid black;
+}
+
+.due-cont {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vh;
+}
+
+.due-cont p {
+    /*display: block-inline;*/
+    width: 8vw;
+}
+
+.due-cont input {
+
+    padding: 1vh 1vw;
+    border-radius: 5px;
+    outline: none;
+    margin-left: 5vw;
+    box-shadow: none;
+    border: 1px solid black;
+}
+
+.bug-sub-btn {
+    padding: 1vh 1vw;
+    margin: 8vh 40% 0 40%;
+    border: 2px solid #FE6401;
+    border-radius: 5px;
+    box-shadow: 2px 8px 8px -4px #FE6401;
+}
+
+.sidenav {
+    height: 99%;
+    width: 20vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(43, 43, 43);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 1s;
+    border-radius: 30px;
+    margin: 0.5vh 0.25vw;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: x-large;
+    padding: 5vh 3vw;
+}
+
+.nav-card {
+    display: block;
+    margin-bottom: 10vh;
+    cursor: pointer;
+    font-size: xx-large;
+
+}
+
+#cl-icon {
+    margin-left: 12vw;
+    cursor: pointer;
+    margin-bottom: 3vh;
+
+}
+
+.sidenav svg {
+    background-color: rgb(43, 43, 43);
+    height: 40px;
+    width: 40px;
+    fill: #FE6401;
+    /*position: absolute;*/
+    /*right: 0.1vw;*/
+    /*top: 5vh;*/
+
+}
+
+.bug-card {
+
+}
+
+.not-nav {
+    transition: 1s;
+}
+
+.dashboard {
+    margin-top: 5vh;
+}
+
+
+.not-nav svg {
+    height: 40px;
+    width: 40px;
+    fill: #FE6401;
+    cursor: pointer;
+}
+
+.bug-card {
+    font-size: medium;
+    padding: 3vh 1vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*justify-content: space-evenly;*/
+}
+
+.b-title {
+    width: 30%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.b-assignee {
+    width: 10%;
+}
+
+.b-created {
+    width: 10%;
+}
+
+.b-status {
+    width: 15%;
+}
+
+.b-assigned {
+    width: 10%;
+}
+
+.b-due {
+    width: 10%;
+}
+
+.b-severity {
+    width: 15%;
+}
+
+.divider {
+    border-bottom: 0.1px solid #464444;
+    /*width: 1px;*/
+    background-color: #464444;
+}
+
+.empty {
+    width: 5%;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.nav-card a {
+    text-decoration: none !important;
+    color: #adacac !important;
+}
+
+.nav-card a:hover {
+    color: #FFFEFE !important;
+}
