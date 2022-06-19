@@ -14,6 +14,7 @@ export const bugSeverity = ['Minor', 'Major', 'Critical', 'Show Stopper'];
 function handleSidenavCloseCreateBugs() {
     document.getElementById('cr-bu').style.marginLeft = "80px";
 }
+
 function handleSidenavOpenCreateBugs() {
     document.getElementById('cr-bu').style.marginLeft = "21vw";
 
@@ -64,8 +65,8 @@ export default function CreateBug() {
     return (
         <>
             <SideNavbar
-                open = {handleSidenavOpenCreateBugs}
-                close = {handleSidenavCloseCreateBugs}
+                open={handleSidenavOpenCreateBugs}
+                close={handleSidenavCloseCreateBugs}
             />
             <div className={"bug-crt"} id={"cr-bu"} style={{transition: "1s"}}>
                 <nav className={"status-nav"}>
@@ -139,7 +140,10 @@ export default function CreateBug() {
                             <p>DUE DATE:</p>
                             <input type={"date"} onChange={handleChange} name={"due"}/>
                         </div>
-                        <button onClick={handleClick} className={"bug-sub-btn"}>Create Bug</button>
+                        <Link to={'/bugs'}>
+                            <button onClick={handleClick} className={"bug-sub-btn"}>Create Bug</button>
+                        </Link>
+
                     </div>
                 </div>
             </div>

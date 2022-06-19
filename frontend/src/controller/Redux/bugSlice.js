@@ -9,6 +9,7 @@ const URL = 'http://localhost:5000/bug'
 const initialState = {
     allBugs: [],
     particularBug: [],
+    isLoading: false,
 }
 
 
@@ -42,14 +43,24 @@ export const findOneBugServer = createAsyncThunk(
         const res = await axios.get(`${URL}/`, {
             params: filter
         })
+        // console.log(res.data)
         return res.data;
+
     }
 )
 
 const bugSlice = createSlice({
     name: 'bug',
     initialState: initialState,
-    reducers: {},
+    reducers: {
+
+        putBugServer: (state, action) => {
+            console.log("OOOOO LALALALALALA")
+            axios.put(`${URL}/saveEdit`, action.payload).then(r => {})
+            console.log(action.payload, action);
+        }
+
+    },
     extraReducers: {
         [postBugServer.pending]: (state, action) => {
 
@@ -75,15 +86,18 @@ const bugSlice = createSlice({
         },
 
         [findOneBugServer.fulfilled]: (state, action) => {
-            console.log("I am Fullfilled")
+            // console.log("I am Fullfilled");
             state.particularBug = action.payload;
+            console.log(state.particularBug);
+            state.isLoading = false;
         },
         [findOneBugServer.pending]: (state, action) => {
+            state.isLoading = true;
         },
         [findOneBugServer.rejected]: (state, action) => {
         }
     }
 })
 
-
+export const {putBugServer} = bugSlice.actions;
 export default bugSlice.reducer;

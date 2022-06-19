@@ -11,7 +11,10 @@ import {
 } from "react-router-dom";
 import SideNavbar from "./components/SideNavbar";
 import BugEditPage from "./components/BugEditPage";
+import Loading from "./components/Loading";
 function App() {
+
+    const {isLoading} = useSelector((store) => store.bug);
 
     useEffect(()=>{
         // handleSidenavOpen();
@@ -27,7 +30,7 @@ function App() {
                 <Route path={"report"} element={<CreateBug/>}>
 
                 </Route>
-                <Route path={"bugs/edit/:_id"} element={<BugEditPage/>}>
+                <Route path={"bugs/edit/:_id"} element={isLoading ? <Loading/>:<BugEditPage/>}>
 
                 </Route>
             </Routes>

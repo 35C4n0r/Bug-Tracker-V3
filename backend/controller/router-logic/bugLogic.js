@@ -2,14 +2,16 @@ import bugModel from "../../models/bugModel.js";
 
 export let bugGet = (req, res) => {
     bugModel.find(req.query).then(r => {
-        console.log(req.query);
-        console.log(r);
+        // console.log(req.query);
+        // console.log(r);
         res.json(r);
     })
 }
 
 export let bugEditPut = (req, res) => {
     const {_id, ...updates} = req.body
+    // console.log("qwertyuiopasdfghjklzxcvbnm,")
+    // console.log(_id, updates)
     bugModel.findByIdAndUpdate(_id, updates).then(r => {
         if (!r) return res.json(false);
         res.json(true);
