@@ -12,6 +12,7 @@ import {
 import SideNavbar from "./components/SideNavbar";
 import BugEditPage from "./components/BugEditPage";
 import Loading from "./components/Loading";
+import DashboardPage from "./components/Home";
 function App() {
 
     const {isLoading} = useSelector((store) => store.bug);
@@ -24,15 +25,10 @@ function App() {
         <div className="App">
             {/*<SideNavbar/>*/}
             <Routes>
-                <Route path={'bugs'} element={<BugsPage/>}>
-
-                </Route>
-                <Route path={"report"} element={<CreateBug/>}>
-
-                </Route>
-                <Route path={"bugs/edit/:_id"} element={isLoading ? <Loading/>:<BugEditPage/>}>
-
-                </Route>
+                <Route path={''} element={<DashboardPage/>}/>
+                <Route path={'bugs'} element={<BugsPage/>}/>
+                <Route path={"report"} element={<CreateBug/>}/>
+                <Route path={"bugs/edit/:_id"} element={isLoading ? <Loading/>:<BugEditPage/>}/>
             </Routes>
 
         </div>

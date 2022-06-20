@@ -27,7 +27,7 @@ export default function SideNavbar(props) {
             </div>
             <div id={"n-cd"}>
                 <div className={"dashboard nav-card"}>
-                    <Link to={""}>Dashboard</Link>
+                    <Link to={"/"}>Dashboard</Link>
                 </div>
                 <div className={"bugs nav-card"}>
                     <Link to={'/bugs'}><span>Bugs</span></Link>

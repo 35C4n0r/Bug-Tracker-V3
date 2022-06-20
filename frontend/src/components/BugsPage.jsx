@@ -57,8 +57,6 @@ export default function BugsPage() {
         dispatch(findAllBugServer());
         handleSidenavOpenBugsPage();
         handleSidenavOpen();
-
-
     }, [dispatch])
 
 

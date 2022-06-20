@@ -237,13 +237,6 @@ export default function BugEditPage() {
                         <Link to={'/bugs'}>
                             <button onClick={handleClick} className={"bug-sub-btn"}>Save Changes</button>
                         </Link>
-
-                        {/*{}*/}
-                        {/*{particularBug[0].bug}*/}
-                        {/*{particularBug[0].bug}*/}
-                        {/*{particularBug[0].bug}*/}
-                        {/*{particularBug[0].bug}*/}
-                        {/*{particularBug[0].bug}*/}
                     </div>
                 </div>
             </div>

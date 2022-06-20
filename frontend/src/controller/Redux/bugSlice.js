@@ -78,7 +78,7 @@ const bugSlice = createSlice({
 
         [findAllBugServer.fulfilled]: (state, action) => {
             state.allBugs = action.payload;
-            console.log("UUUWWWWUUUU");
+            // console.log("UUUWWWWUUUU");
         },
 
         [findAllBugServer.rejected]: (state, action) => {

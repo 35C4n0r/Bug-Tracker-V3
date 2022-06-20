@@ -415,3 +415,56 @@ a{
 .nav-card a:hover {
     color: #FFFEFE !important;
 }
+
+
+.dash-card-cont{
+    width: 23%;
+    height: 13vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1vh 1vw;
+    margin: 1.5% 1%;
+    font-weight: bolder;
+    /*color: inherit;*/
+}
+
+.dash-card-cont:hover{
+    box-shadow: 0 3px 5px rgb(0 0 0 / 0.1);
+}
+
+.dash-card-info{
+    display: flex;
+    flex-direction: column;
+    /*background-color: white;*/
+}
+
+.dash-card-mega-cont{
+    display: flex;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
+}
+
+.dash-card-status, .dash-card-severity{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.dash-card-status{
+    color: #8D0C1E;
+}
+
+.dash-card-severity{
+    color: #004F9A;
+}
+
+.dash-card-status svg{
+    fill: #f10830;
+    height: 40px;
+}
+
+.dash-card-severity svg{
+    height: 40px;
+    fill: #0576ea;
+}
